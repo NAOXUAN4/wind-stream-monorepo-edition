@@ -1,0 +1,318 @@
+
+
+<template>
+	<!-- <h1>PlayGround 😽</h1> -->
+	<div class = "playground">
+		<h2>Part.1 Button</h2>
+
+		<div class="pg-container">
+
+      <div style="display: flex; flex-direction: row; margin-top: 5px; gap: 4px;">
+					<WsButton @click = "handlebtAToast">
+						default
+					</WsButton>
+          <WsButton plain @click = "handlebtAToast">
+						plain
+					</WsButton>
+          <WsButton icon="fa-lemon fa-regular" @click = "handlebtAToast">
+						icon button
+					</WsButton>
+          <WsButton circle @click = "handlebtAToast">
+						circle
+					</WsButton>
+          <WsButton round @click = "open">
+						round
+					</WsButton>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 5px;">
+				<div v-for="item in <ButtonType[]>['primary', 'error', 'warning', 'success', 'info']" style="margin: 2px;" :key="item">
+					<WsButton :type=item @click = "handlebtAToast(item)">
+						{{ item }}
+					</WsButton>
+				</div>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 5px;">
+				<div v-for="item in <ButtonType[]>['primary', 'error', 'warning', 'success', 'info']" style="margin: 2px;" :key="item">
+					<WsButton :type=item plain>
+						{{ item }}
+					</WsButton>
+				</div>
+			</div>
+
+			<div style="display: flex; flex-direction: row; margin-top: 5px;">
+				<div v-for="item in <ButtonType[]>['primary', 'error', 'warning', 'success', 'info']" style="margin: 2px;" :key="item">
+					<WsButton :type=item disabled>
+						{{ item }}
+					</WsButton>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2>Part.2 Collapse</h2>
+		<div class="pg-container">
+			<WsCollapse  v-model="startCollpase.list" style="width:30%; font-family: 'Times New Roman', Times, serif;">
+				<WsCollapseItem name="1" title="Item-1">
+					<template #content>
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+
+						</ul>
+					</template>
+				</WsCollapseItem>
+
+				<WsCollapseItem name="4" title="Item-2">
+
+					<template #content>
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+
+						</ul>
+					</template>
+				</WsCollapseItem>
+
+				<WsCollapseItem name="2">
+					<template #title>
+						<h3>Item-3</h3>
+					</template>
+
+					<template #content>
+            <h4>LineTitle</h4>
+            <p>slot List 1</p>
+						<ul>
+							<p>slot List 1</p>
+							<li>你好！</li>
+							<li>nihaoma！</li>
+							<li>4</li>
+
+						</ul>
+					</template>
+				</WsCollapseItem>
+
+				<WsCollapseItem name="3">
+					<template #title>
+						<h3>Item-4</h3>
+					</template>
+
+					<template #content>
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+
+						</ul>
+					</template>
+				</WsCollapseItem>
+
+			</WsCollapse>
+		</div>
+
+    <hr>
+    <h2>part.3 Icons</h2>
+    <div class="pg-container">
+      <div>
+        <p>regular</p>
+        <WsIcon icon="fa-lemon fa-regular" size="2x"/>
+        <WsIcon icon="fa-lemon fa-regular" type="primary" size="2x"/>
+        <WsIcon icon="fa-lemon fa-regular" type="error" size="2x"/>
+        <WsIcon icon="fa-lemon fa-regular" type="warning" size="2x"/>
+        <WsIcon icon="fa-lemon fa-regular" type="info" size="2x"/>
+      </div>
+      <div>
+        <p>solid</p>
+        <WsIcon icon="fa-lemon fa-solid" size="2x"/>
+        <WsIcon icon="fa-lemon fa-solid" type="primary" size="2x"/>
+        <WsIcon icon="fa-lemon fa-solid" type="error" size="2x"/>
+        <WsIcon icon="fa-lemon fa-solid" type="warning" size="2x"/>
+        <WsIcon icon="fa-lemon fa-solid" type="info" size="2x"/>
+      </div>
+
+      <div>
+        <p>Custom</p>
+        <WsIcon icon="fa-lemon fa-solid" size="2x" color="#f3f421"/>
+        <WsIcon icon="fa-lemon fa-regular" size="3x"/>
+      </div>
+    </div>
+
+    <hr>
+    <h2>part.4 Toast</h2>
+    <div class="pg-container">
+      <div style="height: 100px; width: 100px;"><WsButton @click = "handlebtAToast">AwakeToast</WsButton></div>
+      <WsToast context="this is Toast" closable icon="fa-regular fa-calendar-check" :type="Toasttype" v-model="isToastActive"/>
+    </div>
+
+    <hr>
+    <h2>part.5 ToolTips</h2>
+    <div class="pg-container"  style="display: grid; width: 500px;
+            grid-template-columns: repeat(2, 2fr); /* 3列 */
+            grid-template-rows: repeat(2, 2fr);    /* 2行 */
+            gap: 20px; /* 行列间距 */
+            margin-bottom: 40px;">
+      <WsToolTip content="tooltip1，你好吗你好吗" trigger="click" v-model="TooltipVmodel" ref="tooltipRef" :change-delay="0" placement="bottom">
+        <WsButton>bottom👇</WsButton>
+        <template #content>
+          bottom 👇
+        </template>
+      </WsToolTip>
+
+      <WsToolTip content="tooltip1，你好吗你好吗" trigger="hover" :change-delay="0" placement="top">
+        <WsButton>top👆</WsButton>
+        <template #content>
+          top 👆
+        </template>
+      </WsToolTip>
+
+      <WsToolTip content="tooltip1，你好吗你好吗" trigger="hover" :change-delay="0" placement="right">
+        <WsButton>right👉</WsButton>
+        <template #content>
+          right 👉
+        </template>
+      </WsToolTip>
+
+      <WsToolTip content="tooltip1，你好吗你好吗" trigger="hover" :change-delay="0" placement="left">
+        <WsButton>left👈</WsButton>
+        <template #content>
+          left 👈
+        </template>
+      </WsToolTip>
+    </div>
+
+
+    <hr>
+    <h2>part.6 DropDown</h2>
+    <div class="pg-container">
+      <WsToast :context="`this is ${DropDownSelected}`" closable icon="fa-regular fa-calendar-check" :type="Toasttype" v-model="isToastActivedp"/>
+      <WsDropDown ref = "dropdownRef" :DropDownMenuOptions = "[
+        {
+          label: 'select-1',
+          key: 11,
+        },
+        {
+          label: 'select-2',
+          key: 22,
+          divided: true,
+          disabled: true
+        },
+        {
+          label: h('span','select-3'),
+          key: 33,
+        }
+      ]" v-model:select="DropDownSelected" trigger="hover">
+        <WsButton>Dropdown</WsButton>
+      </WsDropDown>
+    </div>
+
+    <hr>
+    <h2>part.7 Message</h2>
+    <div class="pg-container" style="display: grid; gap: 20px;  width: 30px;">
+      <!-- <WsMessage :show-close="true" message="nihaoma"></WsMessage> -->
+      <WsButton type="info" @click = "() => {
+        createMessage({message: 'info 🤫', showClose: true, duration: 5000});
+        }">info</WsButton>
+      <WsButton type="success" @click = "() => {
+        createMessage({message: 'success 🐔', showClose: true, duration: 5000 ,type: 'success'});
+        }">success</WsButton>
+      <WsButton type="error" @click = "() => {
+        createMessage({message: 'error 🐕', showClose: true, duration: 5000, type: 'error'});
+        }">error</WsButton>
+      <WsButton type="warning" @click = "() => {
+        createMessage({message: 'warning 😽', showClose: true, duration: 5000, type: 'warning'});
+        }">warning</WsButton>
+    </div>
+
+	</div>
+</template>
+
+<script setup lang="ts">
+	import { onMounted, reactive, ref,  h } from 'vue';
+	import { WsButton, WsCollapse, WsCollapseItem, WsToast, WsDropDown, WsMessage, WsIcon, WsToolTip, createMessage } from 'wind-stream-ui';
+	// import type { ButtonInstance, ButtonType } from './components/Button/type';
+	// import type { ToastType } from './components/Toast/type';
+
+
+  // import type { ToolTipInstance } from './components/ToolTip/type';
+
+  // import type { DropDownInstance, DropDownOptionsKey } from './components/DropDown/type';
+  import { watch } from 'vue';
+
+  // import { createMessage, getLastMessageNodeInstance } from './components/Message/method';
+
+
+
+	// const ButtonDom = ref<ButtonInstance>();
+	const startCollpase = reactive({list:['2']});
+  const isToastActive = ref(false);
+  const Toasttype = ref<ToastType>();
+  const TooltipVmodel = ref(false);
+  const tooltipRef = ref<ToolTipInstance | null>(null);
+
+  const DropDownSelected = ref<DropDownOptionsKey | null>(null);
+  const isToastActivedp = ref(false);
+
+  watch(DropDownSelected, ()=> {
+    // console.log(DropDownSelected.value);
+    isToastActivedp.value = true;
+  });
+
+  const dropdownRef = ref<DropDownInstance | null>(null);
+
+  const open = () => {
+    tooltipRef.value?.show();
+  };
+
+  const close = () => {
+    tooltipRef.value?.hide();
+  };
+
+  const handlebtAToast = (type: any) => {
+    // 如果type是ToastType类型，直接使用
+    if (type === 'primary' || type === 'error' || type === 'warning' || type === 'success' || type === 'info') {
+      Toasttype.value = type;
+    } else {
+      // 如果是MouseEvent对象，使用默认类型
+      Toasttype.value = 'info';
+    }
+    isToastActive.value = true;
+  };
+
+	onMounted(()=>{
+		// console.log(ButtonDom.value?.ref);
+    setTimeout(()=>{
+      TooltipVmodel.value = false;
+    },2000);
+	});
+
+</script>
+
+<style scoped>
+	.playground{
+    padding: 2%;
+    border-radius: 15px; width: 90%; height: 1800px;
+    background: linear-gradient(to right, #dedfe3 60%, #47867b 30%, #ffffff);
+		display: flex;
+		flex-direction: column;
+
+		h2,h3 {
+			color: rgb(0, 0, 0);
+      font-family: 'Times New Roman', Times, serif;
+		}
+
+		.pg-container{
+			margin-top: 2%;
+			/* color: aliceblue; */
+		}
+	}
+
+
+</style>
+
+
+
