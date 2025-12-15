@@ -233,7 +233,8 @@
 
 <script setup lang="ts">
 	import { onMounted, reactive, ref,  h } from 'vue';
-	import { WsButton, WsCollapse, WsCollapseItem, WsToast, WsDropDown, WsMessage, WsIcon, WsToolTip, createMessage } from 'wind-stream-ui';
+	import { WsCollapse, WsCollapseItem, WsToast, WsDropDown, WsMessage, WsIcon, WsToolTip, createMessage } from 'wind-stream-ui';
+  import { WsButton } from "wind-stream-ui";
 	// import type { ButtonInstance, ButtonType } from './components/Button/type';
 	// import type { ToastType } from './components/Toast/type';
 

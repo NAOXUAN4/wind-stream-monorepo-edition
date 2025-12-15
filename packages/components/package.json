@@ -1,19 +1,16 @@
 {
   "name": "wind-stream-ui",
-  "version": "1.0.0",
-
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-
-
-
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.mjs",
   "types": "./dist/es/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "global.d.ts"
   ],
   "exports": {
     ".": {
@@ -32,10 +29,11 @@
     "vue": "^3.3.0"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
     "@vitejs/plugin-vue": "^6.0.3",
+    "rollup-plugin-visualizer": "^6.0.5",
     "sass-embedded": "^1.96.0",
-    "vite": "^5.0.0",
-    "rollup-plugin-visualizer": "^6.0.5"
+    "vite": "^5.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
