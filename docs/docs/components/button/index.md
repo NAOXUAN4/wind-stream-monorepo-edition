@@ -12,7 +12,7 @@
 3. `&` 级联`class`名称, 添加`:hover`等属性,使用`var()`来引用css变量
 
 #### types
-```ts
+```typescript
 /// 定义Button组件属性用于在调用时传值例如 <ws-button type="primary"></ws-button>
 // 导出类型规范 (接口)
 export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info';

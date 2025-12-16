@@ -8,7 +8,7 @@
     一款基于 <strong>Vue 3</strong> + <strong>TypeScript</strong> + <strong>Vite</strong> 的现代化 Monorepo 组件库。
 </p>
 
-<p align="center">
+<p style = "display: flex; flex-deriction: row; gap: 1%; align-items: center; justify-content: center">
   <img src="https://img.shields.io/badge/language-TypeScript-blue.svg" alt="TypeScript">
   <img src="https://img.shields.io/npm/v/wind-stream-ui" alt="NPM Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
@@ -38,7 +38,7 @@ npm install wind-stream-ui
 ## 🔨 快速上手 (Usage)
 ### 全量引入 (Full Import)
 
-```ts
+```typescript
 import { createApp } from 'vue'
 import App from './App.vue'
 import WindStreamUI from 'wind-stream-ui'
@@ -77,4 +77,6 @@ pnpm build
 ```
 
 
-> License MIT © 2025 Nanyian
+
+MIT License © 2025 Nanyian
+
