@@ -19,13 +19,14 @@ export default defineConfig(async () => {
       dts({ 
         entryRoot: './src', // 指定源码根目录，防止类型文件目录结构乱掉
         outDir: ['dist/es', 'dist/lib'], // 输出到两个目录，分别给 ESM 和 CJS 用
+        include: ['src/**/*.ts', 'src/**/*.vue', 'src/**/*.d.ts'],
         tsconfigPath: '../../tsconfig.json' // 指定 tsconfig
       })
     
     ],
     build: {
       lib: {
-        entry: resolve(__dirname, 'index.ts'),
+        entry: resolve(__dirname, './src/index.ts'),
         name: 'WindStreamUI',
         minify: false,
         fileName: (format: string) => {
