@@ -32,9 +32,6 @@
 pnpm add wind-stream-ui
 
 # npm
-<<<<<<< HEAD
-npm install wind-stream-ui
-=======
 npm install wind-stream-ui
 ```
 
@@ -81,4 +78,3 @@ pnpm build
 
 
 > License MIT © 2025 Nanyian
->>>>>>> release
