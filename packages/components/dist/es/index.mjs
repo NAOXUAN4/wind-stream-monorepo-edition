@@ -3701,7 +3701,7 @@ const In = /* @__PURE__ */ new Set(), cf = {
   for (const [n, r] of t)
     a[n] = r;
   return a;
-}, vf = /* @__PURE__ */ Me(pf, [["__scopeId", "data-v-d6b74589"]]), qr = Symbol("collapseItemProvider"), hf = /* @__PURE__ */ G({
+}, vf = /* @__PURE__ */ Me(pf, [["__scopeId", "data-v-5099f372"]]), qr = Symbol("collapseItemProvider"), hf = /* @__PURE__ */ G({
   name: "WsCollapse",
   __name: "Collapse",
   props: {

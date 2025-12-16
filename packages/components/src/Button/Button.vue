@@ -51,7 +51,7 @@
     });
 
     const handleClick = (event: MouseEvent) => {
-      emit('click', event);
+        emit('click', event);
     };
 </script>
 

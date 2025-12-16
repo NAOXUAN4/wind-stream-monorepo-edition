@@ -8,6 +8,6 @@
         "skipLibCheck": true,
         "esModuleInterop": true,
         "moduleResolution": "bundler",
-        "lib": ["esnext", "dom"]
+        "lib": ["esnext", "dom"],
     }
 }
