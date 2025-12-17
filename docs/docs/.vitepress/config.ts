@@ -33,7 +33,11 @@ export default defineConfig({
                                 { text: 'Icon 图标', link: '/technical/components-design/icon/' },
                             ]
                         },
-                        { text: 'Monorepo Structure', link: '/technical/repo-structure' },
+                        { text: 'Monorepo Structure', link: '/technical/repo-structure/',
+                            items: [
+                                { text: '从本地vue项目到发布', link: '/technical/repo-structure/从本地vue项目到发布/' },
+                            ]
+                         },
                     ]
                 }
             ]
