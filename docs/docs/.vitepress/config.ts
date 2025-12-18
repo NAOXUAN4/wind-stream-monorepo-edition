@@ -35,9 +35,9 @@ export default defineConfig({
                         },
                         { text: 'Monorepo Structure', link: '/technical/repo-structure/',
                             items: [
-                                { text: '从本地vue项目到发布', link: '/technical/repo-structure/从本地vue项目到发布/' },
+                                { text: '从本地项目移植到包发布', link: '/technical/repo-structure/从本地项目移植到包发布/' },
                             ]
-                         },
+                        },
                     ]
                 }
             ]
