@@ -1,5 +1,5 @@
 <p align="center">
-  <!-- <img alt="Wind Stream UI Logo" src="/assets/windstreamlogo.png" width="200" style="margin-bottom: 20px;"> -->
+  <img alt="Wind Stream UI Logo" src="/public/home/windstream.png" width="200" style="margin-bottom: 20px;">
 </p>
 
 <h1 align="center">Wind Stream UI</h1>

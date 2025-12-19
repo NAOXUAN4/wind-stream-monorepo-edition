@@ -2,6 +2,9 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     title: "Wind Stream UI",
+    vite: {
+        publicDir: 'public',
+    },
     head: [
         ['link', { rel: 'icon', href: '/assets/wsicon64.ico' }],
         ['meta', { name: 'theme-color', content: '#3bbba6' }],
@@ -31,11 +34,13 @@ export default defineConfig({
                             items: [
                                 { text: 'Button 按钮', link: '/technical/components-design/button/' },
                                 { text: 'Icon 图标', link: '/technical/components-design/icon/' },
+                                { text: 'Collapse 折叠面板', link: '/technical/components-design/collapse/' },
                             ]
                         },
                         { text: 'Monorepo Structure', link: '/technical/repo-structure/',
                             items: [
                                 { text: '从本地项目移植到包发布', link: '/technical/repo-structure/从本地项目移植到包发布/' },
+                                { text: '组件库类型声明与全局组件注册', link: '/technical/repo-structure/组件库类型声明与全局组件注册/' },
                             ]
                         },
                     ]

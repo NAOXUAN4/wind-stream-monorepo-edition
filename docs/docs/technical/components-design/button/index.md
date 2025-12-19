@@ -1,4 +1,4 @@
-# part.1 Button
+# Button
 ----
 
 > 基于原生button添加样式

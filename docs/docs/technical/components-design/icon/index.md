@@ -1,2 +1,2 @@
-# part.3 Icon
+# Icon
 ---
