@@ -3,9 +3,28 @@ name: CI
 
 # 触发时机：推送到 master 分支，或者任何 PR 提交时
 on:
+  push:
+    branches:
+      - master
+    paths-ignore:  # 这些路径的变化会自动跳过
+      - 'docs/**'
+      - '**.md'
+      - 'CHANGELOG.md'
+      - 'README.md'
+      - '.gitignore'
+      - 'package-lock.json'
+      - 'package.json'
   pull_request:
     branches:
       - master
+    paths-ignore:  # 这些路径的变化会自动跳过
+      - 'docs/**'
+      - '**.md'
+      - 'CHANGELOG.md'
+      - 'README.md'
+      - '.gitignore'
+      - 'package-lock.json'
+      - 'package.json'
 
 jobs:
   # 任务 ID
