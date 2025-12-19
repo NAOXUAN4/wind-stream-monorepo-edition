@@ -18,7 +18,7 @@ const builtInIcons = {
  * 按需加载图标
  * @param icon 图标名称或对象，如 'fa-solid fa-xmark' 或 { prefix: 'fas', iconName: 'home' }
  */
-export const loadIcon = (icon: any) => {
+export const loadIcon = (icon: string | { prefix: string; iconName: string }) => {
   // 如果图标是字符串类型
   if (typeof icon === 'string') {
     // 如果图标已加载，直接返回

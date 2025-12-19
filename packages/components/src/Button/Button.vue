@@ -28,7 +28,7 @@
     import type { ButtonProps } from './type';
     import WsIcon from '../Icon/Icon.vue';
 
-    const props = withDefaults(  //// 设置默认属性
+    withDefaults(  //// 设置默认属性
         defineProps<ButtonProps>(),    /// 属性接口
         {
             nativetype: 'button',

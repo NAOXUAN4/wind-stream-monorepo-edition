@@ -152,30 +152,30 @@
   watch(isActive, (newValue) => {
   if (triggerNode.value && poperNode.value && newValue) {
     // 更新 popper 配置以支持宽度控制
-    const updatedOptions = {
-      ...popperOptions.value,
-      modifiers: [
-        ...(popperOptions.value.modifiers || []),
-        {
-          name: 'minWidth',
-          enabled: true,
-          phase: 'beforeWrite',
-          requires: ['computeStyles'],
-          fn: ({ state }: { state: any }) => {
-            const popperState = state;
-            if (props.minWidth) {
-              popperState.styles.popper.minWidth = `${props.minWidth}px`;
-            }
-            if (props.maxWidth) {
-              popperState.styles.popper.maxWidth = `${props.maxWidth}px`;
-            }
-            if (props.autoWidth && triggerNode.value) {
-              popperState.styles.popper.width = `${triggerNode.value.offsetWidth}px`;
-            }
-          }
-        }
-      ]
-    };
+    // const updatedOptions = {
+    //   ...popperOptions.value,
+    //   modifiers: [
+    //     ...(popperOptions.value.modifiers || []),
+    //     {
+    //       name: 'minWidth',
+    //       enabled: true,
+    //       phase: 'beforeWrite',
+    //       requires: ['computeStyles'],
+    //       fn: ({ state }: { state: any }) => {
+    //         const popperState = state;
+    //         if (props.minWidth) {
+    //           popperState.styles.popper.minWidth = `${props.minWidth}px`;
+    //         }
+    //         if (props.maxWidth) {
+    //           popperState.styles.popper.maxWidth = `${props.maxWidth}px`;
+    //         }
+    //         if (props.autoWidth && triggerNode.value) {
+    //           popperState.styles.popper.width = `${triggerNode.value.offsetWidth}px`;
+    //         }
+    //       }
+    //     }
+    //   ]
+    // };
 
     poperInstance = createPopper(triggerNode.value, poperNode.value, popperOptions.value);
     } else {

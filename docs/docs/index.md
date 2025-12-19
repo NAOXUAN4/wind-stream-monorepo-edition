@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Wind Stream UI Logo" src="https://pub-94f4278f2fdf4cf3bbdc3d78db8bf24e.r2.dev/assets/windstream.png" width="200" style="margin-bottom: 20px;">
+  <img alt="Wind Stream UI Logo" src="/public/home/windstream.png" width="200" style="margin-bottom: 20px;">
 </p>
 
 <h1 align="center">Wind Stream UI</h1>
@@ -8,7 +8,7 @@
     一款基于 <strong>Vue 3</strong> + <strong>TypeScript</strong> + <strong>Vite</strong> 的现代化 Monorepo 组件库。
 </p>
 
-<p align="center">
+<p style = "display: flex; flex-deriction: row; gap: 1%; align-items: center; justify-content: center">
   <img src="https://img.shields.io/badge/language-TypeScript-blue.svg" alt="TypeScript">
   <img src="https://img.shields.io/npm/v/wind-stream-ui" alt="NPM Version">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
@@ -32,16 +32,13 @@
 pnpm add wind-stream-ui
 
 # npm
-<<<<<<< HEAD
-npm install wind-stream-ui
-=======
 npm install wind-stream-ui
 ```
 
 ## 🔨 快速上手 (Usage)
 ### 全量引入 (Full Import)
 
-```ts
+```typescript
 import { createApp } from 'vue'
 import App from './App.vue'
 import WindStreamUI from 'wind-stream-ui'
@@ -80,5 +77,6 @@ pnpm build
 ```
 
 
-> License MIT © 2025 Nanyian
->>>>>>> release
+
+MIT License © 2025 Nanyian
+

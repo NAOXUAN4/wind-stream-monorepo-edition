@@ -4,11 +4,15 @@
   "license": "ISC",
   "author": "Iyananna",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "changeset publish",
+    "lint": "eslint packages/components --config packages/components/eslint.config.mjs",
+    "test": "vitest run packages/components",
+    "build:packages": "pnpm -r --filter=./packages/* build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
     "@vitejs/plugin-vue": "^6.0.3",
+    "eslint": "^9.39.2",
     "typescript": "^5.9.3",
     "vite": "^7.2.7",
     "vite-plugin-dts": "^4.5.4",
