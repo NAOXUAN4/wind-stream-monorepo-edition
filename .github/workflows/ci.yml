@@ -1,0 +1,50 @@
+# .github/workflows/ci.yml
+name: CI
+
+# 触发时机：推送到 master 分支，或者任何 PR 提交时
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  # 任务 ID
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      # 3. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: pnpm install
+
+      # 5. 代码风格检查 (Eslint)
+      - name: Lint
+        run: pnpm run lint
+
+      # 6. 构建检查 (确保能打包成功)
+      - name: Build
+        run: pnpm run build
+
+      # 7. 运行单元测试
+      - name: Run Tests
+        run: pnpm run test
