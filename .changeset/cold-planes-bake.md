@@ -1,5 +1,5 @@
 ---
-"wind-stream-ui": major
+"wind-stream-ui": patch
 ---
 
 add README
