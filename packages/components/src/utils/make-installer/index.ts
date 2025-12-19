@@ -2,9 +2,9 @@ import type { App, Plugin } from 'vue';
 
 export function withInstall<T>(component: T) {
   (component as T & Plugin).install = (app: App) => {
-    const name = (component as any).name;
+    const name = (component as unknown as { name: string }).name;
     if (name) {
-      app.component(name, component as any);
+      app.component(name, component as unknown as { name: string });
     }
   };
   return component as T & Plugin;
