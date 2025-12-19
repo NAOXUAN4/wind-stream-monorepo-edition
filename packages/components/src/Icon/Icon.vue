@@ -11,7 +11,7 @@
 <script lang ='ts' setup>
     import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
     import type { IconProps } from './type';
-    import { computed, watch, onMounted } from 'vue';
+    import { watch, onMounted } from 'vue';
     import { loadIcon } from './iconLoader';
 
     defineOptions({
