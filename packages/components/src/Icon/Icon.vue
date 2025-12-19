@@ -20,22 +20,21 @@
     });
     const props = defineProps<IconProps>();
 
-    // 当icon属性变化时，按需加载图标
+    // 在调用 loadIcon 前增加类型判断
     watch(() => props.icon, (newIcon) => {
-      if (newIcon) {
+      if (typeof newIcon === 'string') {
         loadIcon(newIcon);
+      } else if (typeof newIcon === 'object' && newIcon !== null && 'prefix' in newIcon && 'iconName' in newIcon) {
+        loadIcon(newIcon as { prefix: string; iconName: string });
       }
     }, { immediate: true });
 
-    // 组件挂载时加载图标
     onMounted(() => {
-      if (props.icon) {
+      if (typeof props.icon === 'string') {
         loadIcon(props.icon);
+      } else if (typeof props.icon === 'object' && props.icon !== null && 'prefix' in props.icon && 'iconName' in props.icon) {
+        loadIcon(props.icon as { prefix: string; iconName: string });
       }
-    });
-
-    const styleShell4ChageColor = computed(()=>{
-      return props.color ? {color: props.color} : {};
     });
 
 </script>
