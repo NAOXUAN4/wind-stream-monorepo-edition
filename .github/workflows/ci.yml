@@ -59,7 +59,7 @@ jobs:
 
       # 6. 构建检查 (确保能打包成功)
       - name: Build
-        run: pnpm run build
+        run: pnpm run build:packages
 
       # 7. 运行单元测试
       - name: Run Tests
