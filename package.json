@@ -7,7 +7,7 @@
     "release": "changeset publish",
     "lint": "eslint packages/components --config packages/components/eslint.config.mjs --fix",
     "test": "vitest run packages/components",
-    "build": "pnpm -r build"
+    "build:packages": "pnpm -r --filter='./packages/*' build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
