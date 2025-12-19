@@ -5,7 +5,7 @@
   "author": "Iyananna",
   "scripts": {
     "release": "changeset publish",
-    "lint": "eslint packages/components --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint": "eslint packages/components --config packages/components/eslint.config.mjs --fix",
     "test": "vitest run packages/components",
     "build": "pnpm -r build"
   },
