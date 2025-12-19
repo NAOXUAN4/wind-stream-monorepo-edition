@@ -1,5 +1,15 @@
 # play
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies [76fea7e]
+- Updated dependencies [76fea7e]
+- Updated dependencies [76fea7e]
+- Updated dependencies [a6ce095]
+  - wind-stream-ui@2.0.0
+
 ## 0.0.1
 
 ### Patch Changes
