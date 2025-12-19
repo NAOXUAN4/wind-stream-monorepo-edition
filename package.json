@@ -6,7 +6,8 @@
   "scripts": {
     "release": "changeset publish",
     "lint": "eslint packages/components --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "test": "vitest run packages/components"
+    "test": "vitest run packages/components",
+    "build": "pnpm -r build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
