@@ -3,9 +3,6 @@ name: CI
 
 # 触发时机：推送到 master 分支，或者任何 PR 提交时
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
