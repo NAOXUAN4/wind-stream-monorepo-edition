@@ -191,9 +191,16 @@ build: {
 ```
 
 - 变更版本 (可指定只发布子仓库)
+生成版本变更日志 `markdown`
 ```bash
 pnpm changeset
 ```
+
+消耗版本变更文件
+```bash
+pnpm changeset version
+```
+
 
 - 发布
 ```bash

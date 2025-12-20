@@ -41,6 +41,7 @@ export default defineConfig({
                             items: [
                                 { text: '从本地项目移植到包发布', link: '/technical/repo-structure/从本地项目移植到包发布/' },
                                 { text: '组件库类型声明与全局组件注册', link: '/technical/repo-structure/组件库类型声明与全局组件注册/' },
+                                { text: 'CI-CD-workflow', link : '/technical/repo-structure/CI-CD-workflow/'}
                             ]
                         },
                     ]
